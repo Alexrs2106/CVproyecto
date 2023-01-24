@@ -1,0 +1,234 @@
+
+/** Comentario 1:   */
+
+
+/** Comentario 2: Acá se modifican los espacios de interineado
+ de todo el CV (excepto el titulo del nombre) junto con el color de fondo y tamaño de la letra */
+body{
+	background: #9379ee;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+/** Comentario 3: Acá se afecta toda la hoja del CV  */
+.resume_wrapper{
+	display: flex;
+	width: 800px;
+	margin: 50px auto;
+	background: #fff;
+	padding: 5px;
+}
+
+/** Comentario 4:  Acá se modifica el fondo izquierdo del CV */
+.resume_wrapper .resume_left{
+	width: 40%;
+	background: #1b134e;
+}
+
+/** Comentario 5:  Acá se modifica la foto */
+.resume_wrapper .resume_left .resume_image{
+	width: 100%;
+    padding: 3px;
+}
+
+.resume_wrapper .resume_left .resume_image img{
+	width: 100%;
+	display: block;
+}
+
+/** Comentario 6.1:  Acá se modifican los titulos internos del CV */
+.resume_wrapper .resume_title{
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 16px;
+    font-style: normal;
+	margin-bottom: 10px;
+	letter-spacing: 2px;
+}
+/** Comentario 6.2:  Acá se modifican los colores titulos internos del CV (en especifico del cuerpo) */
+.resume_wrapper .resume_right .resume_item .resume_title{
+	color: #26252d;
+    font-style: normal;
+}
+
+/** Comentario 7:  Açá se modifica la letra del fondo izquierdo del CV (excepto los titulos) */
+.resume_wrapper .resume_left .resume_info{
+	color: #ffffff;
+    font-style: italic;
+}
+
+/** Comentario 8: Se modifican "los margenes" del texto del fondo izquierdo */
+.resume_wrapper .resume_left .resume_bottom{
+	padding: 20px 30px;
+}
+
+/** Comentario 9: se modifican las lineas separadoras del cuerpo del CV
+y los espaciados internos del cuerpo  */
+.resume_wrapper .resume_item{
+	padding: 20px 0;
+	border-bottom: 1px solid #1b134e;
+}
+
+.resume_wrapper  .resume_item:last-child{
+	border-bottom: 0;
+}
+
+.resume_wrapper .resume_left .resume_namerole{
+	display: none;
+}
+
+/** Comentario 10: se modifica el titulo del nombre (no el subtitulo de enfermero) */
+.resume_wrapper .resume_namerole .name{
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	font-weight: 1000;
+    font-style: normal;
+	margin-bottom: 5px;
+	letter-spacing: 3px;
+}
+
+
+/** Comentario 11:  Espacio de interlineado en textos del lado izquierdo  */
+.resume_wrapper .resume_left .resume_contact .resume_info:last-child{
+    margin-top: 10px;
+}
+
+/** Comentario 12:  se modifican los subtitulos de contacto del fondo izquierdo  */
+.resume_wrapper .resume_left .resume_contact .resume_subtitle{
+	color: rgb(255, 255, 255);
+	margin-bottom: 2px;
+}
+
+/** Comentario 13:  se modifican los formatos del texto del cuerpo del CV   */
+.resume_wrapper .resume_right{
+	width: 65%;
+	padding: 20px 40px;
+	color: #26252d;
+    font-style: italic;
+}
+
+/** Comentario 14:  se modifican los formatos del texto del nombre  */
+.resume_wrapper .resume_right .resume_namerole .name{
+	color: #26252d;
+	font-size: 32px;
+
+}
+
+/** Comentario 15: Posición de los enunciados de los cursos y carreras  */
+
+.resume_wrapper .resume_right .resume_data{
+	display: flex;
+}
+
+/** Comentario 16: Linea del tiempo de la realización de estudios  */
+.resume_wrapper .resume_right .resume_data .year{
+	padding-right: 35px;
+	width: 100px;
+	position: relative;
+}
+
+/** Comentario 17: Margenes del texto de cursos y carreras  */
+.resume_wrapper .resume_right .resume_data .content{
+	padding-left: 25px;
+	margin-bottom: 20px;
+	width: calc(100% - 100px);
+}
+
+/** Comentario 18: Marcadores internos de la linea del tiempo  */
+.resume_wrapper .resume_right .resume_data .year:before{
+	content: "";
+	position: absolute;
+	top: 5px;
+	right: 0;
+	width: 10px;
+	height: 10px;
+	background: #1b134e;
+	border: 1px solid #26252d;
+	border-radius: 50%;
+}
+
+/** Comentario 19: Formatos de la línea del tiempo  */
+.resume_wrapper .resume_right .resume_data .year:after{
+	content: "";
+    position: absolute;
+    top: 17px;
+    right: 4px;
+    width: 2px;
+    height: 90%;
+	background: #9379ee;
+}
+
+.resume_wrapper .resume_right .resume_data:last-child .year:after{
+	display: none;
+}
+
+/** Comentario 20: Margenes del texto de experiencia  */
+.resume_wrapper .resume_right .resmue_interests .resume_info{
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+}
+
+
+/**Comentario 21: boton de impresión*/
+.boton{
+    background-color: #CCCCCC;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 5px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+	float:left;
+}
+
+.button:hover {
+  background-color: #535362;
+}
+
+
+@media print {
+	#mainMenuDiv {
+	  display: none;
+	  visibility: hidden;
+	}
+  }
+
+
+
+@media screen and (max-width: 800px){
+	.resume_wrapper{
+		width: 95%;
+		margin: 10px auto;
+		flex-direction: column;  
+	}
+	.resume_wrapper .resume_left,
+	.resume_wrapper .resume_right{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 424px){
+	.resume_wrapper .resume_right{
+		padding: 20px 30px;
+	}
+	.resume_wrapper .resume_right .resume_data{
+		flex-direction: column;
+	}
+	.resume_wrapper .resume_right .resume_data .year{
+		padding: 0;
+		margin-bottom: 5px;
+		width: 100%;
+		color: #9379ee;
+	}
+	.resume_wrapper .resume_right .resume_data .year:before,
+	.resume_wrapper .resume_right .resume_data .year:after{
+		display: none;
+	}
+	.resume_wrapper .resume_right .resume_data .content{
+		width: 100%;
+		padding: 0;
+	}
+}
